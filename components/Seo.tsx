@@ -7,7 +7,7 @@ interface Ititle{
 export default function SEO({title}:Ititle){
     return (
         <Head>
-            <title>{title} | Next Movies</title>
+            <title>{title} | HuN Book List</title>
         </Head>
     )
 }

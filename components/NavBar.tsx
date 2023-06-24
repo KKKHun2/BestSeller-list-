@@ -8,34 +8,35 @@ export default function NavBar(){
 
     return (
         <nav>
-            <Link href="/" className={`${router.pathname === "/" ? "active" : ""}`}>Home</Link>
+            <div className="nav_a">
+                 <div className="left-link">
+                 <Link href="/" className={`${router.pathname === "/" ? "active" : ""}`}>Home</Link>
+                 </div>
+            <div className="right-link">
             <Link href="/about" className={router.pathname === "/about" ? "active" : ""}>About</Link>
+            </div>
+            </div>
             <style jsx>{`
-                nav {
+                .nav {
+                    background-color:rgba(113, 128, 147,1.0);
+                }
+                .nav_a {
+                    flex: 1;
                     display: flex;
-                    gap: 10px;
-                    flex-direction: column;
-                    align-items: center;
-                    padding-top: 20px;
-                    padding-bottom: 10px;
-                    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-                        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-                }
-                img {
-                    max-width: 100px;
-                    margin-bottom: 5px;
-                }
-                a {
-                    font-weight: 600;
-                    font-size: 18px;
+                    justify-content: center;
+                    background-color:rgba(113, 128, 147,1.0);
+                    padding-top: 40px;
+                    padding-bottom: 40px;
+                    font-size:35px;
                 }
                 .active {
                     color: tomato;
                 }
-                nav div {
-                    display: flex;
-                    gap: 10px;
-                }
+                .left-link {
+                margin-right:130px;
+                justify-content: flex-start;
+                    }
+
             `}</style>
         </nav>
     );
